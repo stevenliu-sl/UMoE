@@ -48,6 +48,7 @@ def get_args():
     parser.add_argument('--local_rank', type=int, default=0)
     parser.add_argument('--resume', action='store_true', default=False)
     parser.add_argument('--dataset_100bt', action='store_true', default=False)
+    parser.add_argument('--data_files', type=str, default='fineweb_edu_100bt/sample/100BT/*.parquet')
     parser.add_argument('--wikitext_103', action='store_true', default=False)
     parser.add_argument('--ignore_data_skip', action='store_true', default=False)
     parser.add_argument('--gradient_checkpointing', action='store_true', default=False)
@@ -168,7 +169,7 @@ def main(args):
         eval_data = load_dataset("dlwh/wikitext_103_detokenized", split='validation', cache_dir=cache_dir)
     else:
         # we download fineweb-edu from https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/tree/main/sample/100BT in advance
-        data_files = {'train': 'fineweb_edu_100bt/sample/100BT/*.parquet'}
+        data_files = {'train': args.data_files}
         train_data = load_dataset('parquet', data_files=data_files, split='train', num_proc=16, cache_dir=cache_dir)
         train_data = train_data.to_iterable_dataset(num_shards=64)
         eval_data = None
