@@ -48,7 +48,7 @@ def get_args():
     parser.add_argument('--local_rank', type=int, default=0)
     parser.add_argument('--resume', action='store_true', default=False)
     parser.add_argument('--dataset_100bt', action='store_true', default=False)
-    parser.add_argument('--data_files', type=str, default='fineweb_edu_100bt/sample/100BT/*.parquet')
+    parser.add_argument('--data_files', type=str, nargs='+', default=['fineweb_edu_100bt/sample/100BT/*.parquet'])
     parser.add_argument('--wikitext_103', action='store_true', default=False)
     parser.add_argument('--ignore_data_skip', action='store_true', default=False)
     parser.add_argument('--gradient_checkpointing', action='store_true', default=False)
