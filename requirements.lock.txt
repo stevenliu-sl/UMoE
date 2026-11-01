@@ -1,3 +1,4 @@
+absl-py==2.5.1
 accelerate==1.15.0
 aiohappyeyeballs==2.7.1
 aiohttp==3.14.5
@@ -10,15 +11,16 @@ certifi==2026.10.23
 charset-normalizer==3.5.2
 click==8.5.0
 cwevals==0.0.1b1
-datasets==5.1.0
+datasets==5.0.1
 deepspeed==0.19.9
 dill==0.4.1
 distro==1.9.0
 einops==0.8.2
 filelock==4.2.4
 frozenlist==1.8.0
-fsspec==2026.7.0
+fsspec==2026.6.0
 googleapis-common-protos==1.76.0
+grouped_gemm @ file:///storage/ice1/2/4/sliu736/umoe/src/grouped_gemm
 h11==0.16.0
 hf-xet==1.8.0
 hjson==3.1.0
@@ -26,7 +28,7 @@ httpcore==1.0.9
 httpcore2==2.16.0
 httpx==0.28.1
 httpx2==2.16.0
-huggingface_hub==2.4.0
+huggingface_hub==0.36.2
 idna==3.20
 Jinja2==3.1.6
 markdown-it-py==4.2.0
@@ -82,12 +84,12 @@ shellingham==1.5.4
 six==1.17.0
 sniffio==1.3.1
 sympy==1.14.0
-tokenizers==0.23.3
+tokenizers==0.21.4
 torch==2.7.1+cu126
 tqdm==4.70.1
-transformers==5.22.1
+transformers==4.51.3
 triton==3.3.1
-trl==1.17.1
+trl==0.17.0
 truststore==0.10.5
 typer==0.27.3
 typing-inspection==0.4.4
